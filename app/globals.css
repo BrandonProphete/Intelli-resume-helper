@@ -6,8 +6,8 @@
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 240, 240, 240;
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
@@ -36,8 +36,8 @@
 
   --callout-rgb: 238, 240, 241;
   --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
+  --card-rgb: 255, 255, 255;
+  --card-border-rgb: 200, 200, 200;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -103,5 +103,47 @@ a {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+}
+
+/* Phone Frame Styling */
+.phone-frame {
+  position: relative;
+  width: 400px;
+  height: 800px;
+  background: url('/smartphone.png') no-repeat center center;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.chat-container {
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  left: 5%;
+  right: 5%;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  background-color: white; /* Light background color */
+  border-radius: var(--border-radius); /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  overflow: hidden; /* Ensure content fits within the rounded corners */
+}
+
+@media (max-width: 600px) {
+  .phone-frame {
+    width: 300px;
+    height: 600px;
+  }
+
+  .chat-container {
+    top: 10%;
+    bottom: 10%;
+    left: 5%;
+    right: 5%;
   }
 }
